@@ -21,13 +21,15 @@ int showAppOptions() {
 	return 0;
 }
 int handleAppOptions() {
-	// 05-04-2022 14.34
+	// 05-03-2023 08.59
 	int appAction = 0;
 	int choise = 99;
 	bool stop = false;
 	// Operations 
 	appAction = TextUserInterface::writeActionSeperator();
 	while (stop == false) {
+		appAction = TextUserInterface::sizeConsole();
+		appAction = TextUserInterface::clearConsole();
 		appAction = TextUserInterface::writeAppInformation("--Console Application Template--", "V.00.01");
 		appAction = showAppOptions();
 		appAction = TextUserInterface::writeActionSeperator();

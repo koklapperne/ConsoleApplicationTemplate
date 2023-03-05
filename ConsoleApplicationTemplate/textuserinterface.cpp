@@ -139,10 +139,11 @@ int TextUserInterface::handleBlanks() {
 	//
 	appAction = TextUserInterface::writeSelectionHighlighter();
 	appAction = TextUserInterface::writeActionSeperator();
+	
 	return 0;
 }
 int TextUserInterface::handleColors() {
-	// 06-04-2022 08.34
+	// 05-03-2023 09.06
 	// Declarations
 	int appAction;
 	HANDLE h; 
@@ -202,5 +203,26 @@ int TextUserInterface::handleColors() {
 	//
 	appAction = TextUserInterface::writeSelectionHighlighter();
 	appAction = TextUserInterface::writeActionSeperator();
+	// Why twice? It doesn't work with one!
+	appAction = TextUserInterface::pauseApplication();
+	appAction = TextUserInterface::pauseApplication();
+	return 0;
+}
+int TextUserInterface::clearConsole() {
+	// 05-03-2023 08.34
+	std::system("cls");
+	// 
+	return 0;
+}
+int TextUserInterface::sizeConsole() {
+	// 05-03-2023 08.56
+	// Get a handle to the console window
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	// Set the console window size to 80 columns by 40 rows
+	SMALL_RECT windowSize = { 0, 0, 79, 29 };
+	SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
+
+	// 
 	return 0;
 }

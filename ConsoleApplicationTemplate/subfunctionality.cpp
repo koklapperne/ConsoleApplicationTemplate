@@ -25,7 +25,9 @@ int handleSubFunctionalityOptions() {
 	int appAction = 0;
 	int choise = 99;
 	bool stop = false;
-	// Operations 
+	// Clear the console
+	appAction=TextUserInterface::clearConsole();
+	// Operations
 	while (stop == false) {
 		appAction = TextUserInterface::writeSubFunctionalityInformation("--Sub Functionality Options--", "V.00.01");
 		appAction = showSubFunctionalityOptions();

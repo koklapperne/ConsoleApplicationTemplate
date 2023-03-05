@@ -14,4 +14,6 @@ namespace TextUserInterface {
 	int pauseApplication();
 	int handleBlanks();
 	int handleColors();
+	int clearConsole();
+	int sizeConsole();
 }

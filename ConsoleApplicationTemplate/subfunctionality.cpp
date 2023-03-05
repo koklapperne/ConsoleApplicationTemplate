@@ -26,44 +26,44 @@ int handleSubFunctionalityOptions() {
 	int choise = 99;
 	bool stop = false;
 	// Clear the console
-	appAction=TextUserInterface::clearConsole();
+	appAction= textuserinterface::clearConsole();
 	// Operations
 	while (stop == false) {
-		appAction = TextUserInterface::writeSubFunctionalityInformation("--Sub Functionality Options--", "V.00.01");
+		appAction = textuserinterface::writeSubFunctionalityInformation("--Sub Functionality Options--", "V.00.01");
 		appAction = showSubFunctionalityOptions();
-		appAction = TextUserInterface::writeActionSeperator();
+		appAction = textuserinterface::writeActionSeperator();
 		std::cout << "Enter choise: ";
 		std::cin >> choise;
 		// Handle text user interface
-		appAction = TextUserInterface::writeActionSeperator();
+		appAction = textuserinterface::writeActionSeperator();
 		// Handle user input
 		switch (choise) {
 		case 1:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 2:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 3:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 4:
-			appAction = TextUserInterface::handleBlanks();
+			appAction = textuserinterface::handleBlanks();
 			break;
 		case 5:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 6:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 7:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 8:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 9:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 0:
 			stop = true;

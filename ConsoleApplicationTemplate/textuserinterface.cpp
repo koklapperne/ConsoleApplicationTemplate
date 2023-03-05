@@ -5,7 +5,7 @@
 #include <vector>
 // Windows 
 #include <windows.h>
-int TextUserInterface::writeActionSeperator() {
+int textuserinterface::writeActionSeperator() {
 	// 05-04-2022 14.00
 	const int numberOfCharcters = 80;
 	const char theSeperatorCharacter = '*';
@@ -20,7 +20,8 @@ int TextUserInterface::writeActionSeperator() {
 	//std::cout << std::endl;
 	return 0;
 }
-int TextUserInterface::writeSelectionHighlighter() {
+
+int textuserinterface::writeSelectionHighlighter() {
 	// 05-04-2022 14.00
 	const int numberOfCharcters = 80;
 	const char theSeperatorCharacter = '-';
@@ -34,7 +35,8 @@ int TextUserInterface::writeSelectionHighlighter() {
 	}
 	return 0;
 }
-int TextUserInterface::writeAppInformation(std::string appTitle, std::string appVersion) {
+
+int textuserinterface::writeAppInformation(std::string appTitle, std::string appVersion) {
 	// 05-04-2022 14.00
 	const int numberOfCharcters = 80;
 	const int centerOfConsol = 40;
@@ -42,18 +44,19 @@ int TextUserInterface::writeAppInformation(std::string appTitle, std::string app
 	int startAt = 0;
 	startAt = (centerOfConsol - (appTitle.length() / 2));
 	appAction = 0;
-	// appAction = TextUserInterface::writeActionSeperator();
+	// appAction = textuserinterface::writeActionSeperator();
 	std::cout << std::endl;
 	for (int t = 0; t < startAt; t++) {
 		std::cout << ' ';
 	}
 	std::cout << appTitle << std::endl;
 	std::cout << appVersion << std::endl;
-	appAction = TextUserInterface::writeActionSeperator();
+	appAction = textuserinterface::writeActionSeperator();
 	//
 	return 0;
 }
-int TextUserInterface::writeSubFunctionalityInformation(std::string appTitle, std::string appVersion) {
+
+int textuserinterface::writeSubFunctionalityInformation(std::string appTitle, std::string appVersion) {
 	// 05-04-2022 15.22
 	const int numberOfCharcters = 80;
 	const int centerOfConsol = 40;
@@ -61,24 +64,25 @@ int TextUserInterface::writeSubFunctionalityInformation(std::string appTitle, st
 	int startAt = 0;
 	startAt = (centerOfConsol - (appTitle.length() / 2));
 	appAction = 0;
-	//appAction = TextUserInterface::writeActionSeperator();
+	//appAction = textuserinterface::writeActionSeperator();
 	std::cout << std::endl;
 	for (int t = 0; t < startAt; t++) {
 		std::cout << ' ';
 	}
 	std::cout << appTitle << std::endl;
 	std::cout << appVersion << std::endl;
-	appAction = TextUserInterface::writeActionSeperator();
+	appAction = textuserinterface::writeActionSeperator();
 	//
 	return 0;
 }
-int TextUserInterface::writeSelectedOption(std::string selectedOption) {
+
+int textuserinterface::writeSelectedOption(std::string selectedOption) {
 	// 05-04-2022 14.00
 	const int numberOfCharcters = 80;
 	const int centerOfConsol = 40;
 	int appAction = 0;
 	int startAt = 0;
-	appAction = TextUserInterface::writeActionSeperator();
+	appAction = textuserinterface::writeActionSeperator();
 	startAt = (centerOfConsol - (selectedOption.length() / 2));
 	appAction = 0;
 	std::cout << std::endl;
@@ -87,21 +91,23 @@ int TextUserInterface::writeSelectedOption(std::string selectedOption) {
 	}
 	std::cout << selectedOption << std::endl;
 	std::cout << std::endl;
-	appAction = TextUserInterface::writeActionSeperator();
+	appAction = textuserinterface::writeActionSeperator();
 	//
 	return 0;
 }
-int TextUserInterface::writeAppNoOption() {
+
+int textuserinterface::writeAppNoOption() {
 	// 05-04-2022 14.00
 	int appAction = 0;
-	appAction = TextUserInterface::writeSelectionHighlighter();
+	appAction = textuserinterface::writeSelectionHighlighter();
 	std::cout << "Not done yet" << std::endl;
-	appAction = TextUserInterface::writeSelectionHighlighter();
-	appAction = TextUserInterface::writeActionSeperator();
+	appAction = textuserinterface::writeSelectionHighlighter();
+	appAction = textuserinterface::writeActionSeperator();
 	//
 	return 0;
 }
-int TextUserInterface::pauseApplication() {
+
+int textuserinterface::pauseApplication() {
 	// 25-12-2021 19.37
 	std::cout << std::endl;
 	std::cout << "Pres ENTER to continue: ";
@@ -110,14 +116,16 @@ int TextUserInterface::pauseApplication() {
 	//
 	return 0;
 }
-int TextUserInterface::preventConsoleClose() {
+
+int textuserinterface::preventConsoleClose() {
 	// 05-04-2022 14.00
 	std::cout << "Press ENTER to end the application: ";
 	std::system("pause>0");
 	//
 	return 0;
 }
-int TextUserInterface::handleBlanks() {
+
+int textuserinterface::handleBlanks() {
 	// 06-04-2022 08.22
 	// Declarations
 	int appAction;
@@ -126,7 +134,7 @@ int TextUserInterface::handleBlanks() {
 	appAction = 0;
 	str = "*";
 	//
-	appAction = TextUserInterface::writeSelectionHighlighter();
+	appAction = textuserinterface::writeSelectionHighlighter();
 	std::cout << "Please enter your name:";
 	// This works! But why? See
 	// https://www.cplusplus.com/forum/beginner/248026/
@@ -137,12 +145,13 @@ int TextUserInterface::handleBlanks() {
 	getline(std::cin, str);
 	std::cout << "Hello, " << str << " welcome!" << std::endl;
 	//
-	appAction = TextUserInterface::writeSelectionHighlighter();
-	appAction = TextUserInterface::writeActionSeperator();
-	
+	appAction = textuserinterface::writeSelectionHighlighter();
+	appAction = textuserinterface::writeActionSeperator();
+	appAction = textuserinterface::pauseApplication();
 	return 0;
 }
-int TextUserInterface::handleColors() {
+
+int textuserinterface::handleColors() {
 	// 05-03-2023 09.06
 	// Declarations
 	int appAction;
@@ -151,7 +160,7 @@ int TextUserInterface::handleColors() {
 	appAction = 0;
 	h = GetStdHandle(STD_OUTPUT_HANDLE);
 	//
-	appAction = TextUserInterface::writeSelectionHighlighter();
+	appAction = textuserinterface::writeSelectionHighlighter();
 	//
 	SetConsoleTextAttribute(h, 1);
 	std::cout << "Blue color" << std::endl;
@@ -201,20 +210,22 @@ int TextUserInterface::handleColors() {
 	SetConsoleTextAttribute(h, 7);
 	std::cout << "White color, default" << std::endl;
 	//
-	appAction = TextUserInterface::writeSelectionHighlighter();
-	appAction = TextUserInterface::writeActionSeperator();
+	appAction = textuserinterface::writeSelectionHighlighter();
+	appAction = textuserinterface::writeActionSeperator();
 	// Why twice? It doesn't work with one!
-	appAction = TextUserInterface::pauseApplication();
-	appAction = TextUserInterface::pauseApplication();
+	appAction = textuserinterface::pauseApplication();
+	appAction = textuserinterface::pauseApplication();
 	return 0;
 }
-int TextUserInterface::clearConsole() {
+
+int textuserinterface::clearConsole() {
 	// 05-03-2023 08.34
 	std::system("cls");
 	// 
 	return 0;
 }
-int TextUserInterface::sizeConsole() {
+
+int textuserinterface::sizeConsole() {
 	// 05-03-2023 08.56
 	// Get a handle to the console window
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);

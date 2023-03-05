@@ -26,45 +26,45 @@ int handleAppOptions() {
 	int choise = 99;
 	bool stop = false;
 	// Operations 
-	appAction = TextUserInterface::writeActionSeperator();
+	appAction = textuserinterface::writeActionSeperator();
 	while (stop == false) {
-		appAction = TextUserInterface::sizeConsole();
-		appAction = TextUserInterface::clearConsole();
-		appAction = TextUserInterface::writeAppInformation("--Console Application Template--", "V.00.01");
+		appAction = textuserinterface::sizeConsole();
+		appAction = textuserinterface::clearConsole();
+		appAction = textuserinterface::writeAppInformation("--Console Application Template--", "V.00.01");
 		appAction = showAppOptions();
-		appAction = TextUserInterface::writeActionSeperator();
+		appAction = textuserinterface::writeActionSeperator();
 		std::cout << "Enter choise: ";
 		std::cin >> choise;
 		// Handle text user interface
-		appAction = TextUserInterface::writeActionSeperator();
+		appAction = textuserinterface::writeActionSeperator();
 		// Handle user input
 		switch (choise) {
 		case 1:
 			appAction = handleSubFunctionalityOptions();
 			break;
 		case 2:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 3:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 4:
-			appAction = TextUserInterface::handleBlanks();
+			appAction = textuserinterface::handleBlanks();
 			break;
 		case 5:
-			appAction = TextUserInterface::handleColors();
+			appAction = textuserinterface::handleColors();
 			break;
 		case 6:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 7:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 8:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 9:
-			appAction = TextUserInterface::writeAppNoOption();
+			appAction = textuserinterface::writeAppNoOption();
 			break;
 		case 0:
 			stop = true;
@@ -88,5 +88,5 @@ int main()
     appAction = 0;
 	// Assigning
     appAction = handleAppOptions();
-	appAction = TextUserInterface::preventConsoleClose();
+	appAction = textuserinterface::preventConsoleClose();
 }

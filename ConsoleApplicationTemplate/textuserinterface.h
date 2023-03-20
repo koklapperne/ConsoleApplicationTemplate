@@ -2,7 +2,7 @@
 // Standard library headers
 #include <string>
 #include <iostream>
-namespace textuserinterface {
+namespace text_user_interface {
 	// 05-04-2022 14.00
 	int writeActionSeperator();
 	int writeSelectionHighlighter();

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplicationTemplate.cpp">
+    <ClCompile Include="con_applicationtemplate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="textuserinterface.cpp">

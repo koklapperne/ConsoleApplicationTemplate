@@ -2,6 +2,8 @@
 // Standard library headers
 #include <string>
 #include <iostream>
-// Function declarations
-int showSubFunctionalityOptions();
-int handleSubFunctionalityOptions();
+//
+namespace sub_functionality{
+	int showSubFunctionalityOptions();
+	int handleSubFunctionalityOptions();
+}

@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplicationTemplate.cpp" />
+    <ClCompile Include="con_applicationtemplate.cpp" />
     <ClCompile Include="subfunctionality.cpp" />
     <ClCompile Include="textuserinterface.cpp" />
   </ItemGroup>
